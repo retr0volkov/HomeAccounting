@@ -1,16 +1,15 @@
-﻿// DatabaseHelper.cs
-using HomeAccounting;
+﻿using HomeAccounting;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
-using System.Text; // For StringBuilder
+using System.Text;
 using System.Windows.Forms;
 
 public static class DatabaseHelper
 {
-    // Connection string fields (same as before)
+    // Connection string fields
     private static readonly string DbName = "HomeAccountingDB";
     private static readonly string BaseConnectionString = @"Server=(localdb)\MSSQLLocalDB;Integrated Security=true;";
     private static readonly string MasterConnectionString = BaseConnectionString + "Database=master;";
@@ -263,7 +262,7 @@ public static class DatabaseHelper
         }
     }
 
-    // Transaction Methods (AddTransaction, DeleteTransaction - same as before)
+    // Transaction Methods (AddTransaction, DeleteTransaction)
     public static bool AddTransaction(Transaction transaction)
     {
         SqlTransaction sqlTx = null;
@@ -515,7 +514,7 @@ public static class DatabaseHelper
         return transactions;
     }
 
-    // Statistics Methods (GetOverallStats, GetAccountIncomeExpenseSummary, GetTotalBalanceForAllAccounts, GetTransactionCounts, GetLargestTransactions - same as before)
+    // Statistics Methods (GetOverallStats, GetAccountIncomeExpenseSummary, GetTotalBalanceForAllAccounts, GetTransactionCounts, GetLargestTransactions)
     public static DataTable GetOverallStats()
     {
         DataTable dt = new DataTable();
