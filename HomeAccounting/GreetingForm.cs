@@ -15,7 +15,7 @@ namespace HomeAccounting
         public GreetingForm()
         {
             InitializeComponent();
-            // Center the label text if it's not done in Designer
+            // Center the label text 
             this.lblWelcome.Location = new System.Drawing.Point((this.ClientSize.Width - lblWelcome.Width) / 2, 30);
         }
 
